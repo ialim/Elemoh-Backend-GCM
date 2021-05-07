@@ -30,3 +30,24 @@ run().catch((e) => {
   console.log(e);
   process.exit(0);
 });
+
+
+// const res = await fetch('http://localhost:8000/graphql', {
+//         method: 'POST',
+//         headers: { 'Content-Type': 'application/json' },
+//         body: JSON.stringify({ query: `
+//           query {
+//             userOne(filter:{email: "ex@ma.com"}) {
+//               username
+//               _id
+//             }
+//           }`
+//         }),
+//       })
+//     if (!res.ok) return null;
+//     return {
+//         ok: true,
+//         error: null,
+//         token: 'something new',
+//         res: res.json().then(res => res.data.userOne.username)
+//     };

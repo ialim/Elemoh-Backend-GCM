@@ -113,18 +113,6 @@ export const ProductVariantSchema = new Schema(
       required: true,
       default: false,
     },
-    product_list: {
-      type: String,
-      trim: true,
-    },
-    qty_list: {
-      type: String,
-      trim: true,
-    },
-    price_list: {
-      type: String,
-      trim: true,
-    },
   },
   {
     collection: "Product_Variants",

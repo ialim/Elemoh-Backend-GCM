@@ -14,6 +14,9 @@ export const RoleSchema = new Schema(
       unique: true,
       required: true,
     },
+    permissions: {
+      type: [String],
+    },
     is_active: {
       type: Boolean,
       required: true,

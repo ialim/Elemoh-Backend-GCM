@@ -4,7 +4,7 @@ import db from "../utils/db"; // eslint-disable-line no-unused-vars
 
 const schemaComposer = new SchemaComposer();
 
-import { UserQuery, UserMutation, UserRelation } from "../users/schema";
+import { UserQuery, UserMutation, UserRelation, UserService } from "../users/schema";
 import { RoleQuery, RoleMutation } from "../roles/schema";
 import { CategoryMutation, CategoryQuery } from "../category/schema";
 import { WarehouseQuery, WarehouseMutation } from "../warehouses/schema";
@@ -102,6 +102,7 @@ import {
   AdjustmentRelation,
   AdjustmentMutation,
 } from "../adjustment/schema";
+import { VerificationQuery, VerificationMutation } from "../verification/schema";
 
 schemaComposer.Query.addFields({
   ...AccountQuery,
@@ -154,6 +155,7 @@ schemaComposer.Query.addFields({
   ...UserRelation,
   ...ValueQuery,
   ...ValueRelation,
+  ...VerificationQuery,
   ...WarehouseQuery,
 });
 
@@ -188,7 +190,9 @@ schemaComposer.Mutation.addFields({
   ...UnitMutation,
   ...UserMutation,
   ...ValueMutation,
+  ...VerificationMutation,
   ...WarehouseMutation,
+  ...UserService,
 });
 
 export default schemaComposer.buildSchema();
